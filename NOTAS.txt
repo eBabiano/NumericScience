@@ -1,2 +1,7 @@
 Repositorio de GIT
 https://github.com/eBabiano/NumericScience
+
+Aplicacion-ParserBBDD-SQLite
+
+FASE1: Meter un número y que te saque los valores numericos de gematria.
+FASE2: Que en base a esos números busque en la base de datos y te saque información adicional.
