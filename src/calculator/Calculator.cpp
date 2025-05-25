@@ -4,7 +4,7 @@
 
 namespace calculator
 {
-    std::vector<int> Calculator::generalReduction(int number)
+    std::vector<int> Calculator::reductionByLevels(int number)
     {
         int redNum = number;
         std::vector<int> reductionVector;
@@ -60,9 +60,50 @@ namespace calculator
     {
         std::string polarity = "null";
 
-        
+        std::vector<int> levels = reductionByLevels(number);
+        int reduction = levels.at(levels.size()-1);
+
+        if (reduction == 1 || reduction == 3)
+        {
+            polarity = "Positive";
+        }
+        else if (reduction == 6)
+        {
+            polarity = "Negative";
+        }
+        else if (reduction == 9)
+        {
+            polarity = "Neutral";
+        }
 
         return polarity;
+    }
+
+    std::pair<int, std::string> Calculator::pitagoric(int number)
+    {
+        std::pair<int, std::string> result;
+
+        int pitDiv = number / 9;
+        int pitMul = pitDiv * 9;
+        int rest = number - pitMul;
+
+        result.first = rest;
+
+        bool isPair = rest % 2 == 0;
+        if (rest == 9)
+        {
+            result.second = "Neutral";
+        }
+        else if (isPair)
+        {
+            result.second = "Positive";
+        }
+        else
+        {
+            result.second = "Negative";
+        }
+
+        return result;
     }
 
     std::vector<int> Calculator::splitNumber(const std::string& number)
