@@ -4,4 +4,8 @@ https://github.com/eBabiano/NumericScience
 Aplicacion-ParserBBDD-SQLite
 
 FASE1: Meter un número y que te saque los valores numericos de gematria.
+- Adicion teosofica
+- Reduccion teosofica
+- Calculo pitagorico
+
 FASE2: Que en base a esos números busque en la base de datos y te saque información adicional.
